@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/hitomiyang/static/css/main.073c9b0a.css",
-    "main.js": "/hitomiyang/static/js/main.6ee56019.js",
-    "static/js/787.bad34128.chunk.js": "/hitomiyang/static/js/787.bad34128.chunk.js",
-    "static/media/logo.svg": "/hitomiyang/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/hitomiyang/index.html",
-    "main.073c9b0a.css.map": "/hitomiyang/static/css/main.073c9b0a.css.map",
-    "main.6ee56019.js.map": "/hitomiyang/static/js/main.6ee56019.js.map",
-    "787.bad34128.chunk.js.map": "/hitomiyang/static/js/787.bad34128.chunk.js.map"
+    "main.css": "/static/css/main.073c9b0a.css",
+    "main.js": "/static/js/main.e26c7986.js",
+    "static/js/787.bad34128.chunk.js": "/static/js/787.bad34128.chunk.js",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
+    "main.e26c7986.js.map": "/static/js/main.e26c7986.js.map",
+    "787.bad34128.chunk.js.map": "/static/js/787.bad34128.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.6ee56019.js"
+    "static/js/main.e26c7986.js"
   ]
 }
