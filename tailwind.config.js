@@ -22,6 +22,13 @@ module.exports = {
       animation: {
         AppLogoSpan: 'AppLogoSpan infinite 20s linear',
         HeartBeat: 'HeartBeat 1s ease infinite'
+      },
+      colors: {
+        primary: {
+          light: "rgb(var(--primary-light) / <alpha-value>)",
+          DEFAULT: "rgb(var(--primary) / <alpha-value>)",
+          dark: "rgb(var(--primary-dark) / <alpha-value>)",
+        }
       }
     },
   },

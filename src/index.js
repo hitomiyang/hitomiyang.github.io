@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+
 import reportWebVitals from './reportWebVitals';
 import Header from './Header';
 import Copyright from './Copyright';
 import Nav from './Nav';
-import Content from './Content';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

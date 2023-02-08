@@ -3,15 +3,21 @@
 @tailwind utilities;
 
 @layer base {
-    body {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-            "Helvetica Neue", sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
+	:root {
+		--primary-light: 219 112 147;
+		--primary: 113 85 113;
+		--primary-dark: 178 48 92;
+	}
 
-    code {
-        font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-    }
+	body {
+		margin: 0;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+			"Helvetica Neue", sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	code {
+		font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+	}
 }
