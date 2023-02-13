@@ -28,6 +28,11 @@ module.exports = {
           light: "rgb(var(--primary-light) / <alpha-value>)",
           DEFAULT: "rgb(var(--primary) / <alpha-value>)",
           dark: "rgb(var(--primary-dark) / <alpha-value>)",
+        },
+        secondary: {
+          light: "rgb(var(--secondary-light) / <alpha-value>)",
+          DEFAULT: "rgb(var(--secondary) / <alpha-value>)",
+          dark: "rgb(var(--secondary-dark) / <alpha-value>)",
         }
       }
     },
