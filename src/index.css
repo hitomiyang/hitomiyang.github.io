@@ -83,6 +83,36 @@
 		border-bottom: solid 4.2426px #eee;
 		border-left: solid 4.2426px #eee;
 	}
+	.icon-close {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+		opacity: 0.6;
+	}
+	.icon-close:before,
+	.icon-close:after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		height: 1px;
+		background: #fff;
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		transform: rotate(45deg);
+		left: 0;
+	}
+	.icon-close:after {
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+	.icon-close:hover {
+		opacity: 1;
+	}
 }
 
 @layer components {
@@ -92,17 +122,39 @@
 	body {
 		@apply text-base font-normal text-[#5a5a5a];
 	}
-	nav .logo {
-		@apply mr-4 inline-block whitespace-nowrap py-3.5 px-2 text-base font-bold leading-[15px] text-primary transition-all duration-300 lg:text-lg lg:text-white/70 lg:hover:text-white;
+	.navClassName {
+		@apply lg:flex-row lg:flex-nowrap lg:bg-white/0 fixed top-0 left-0 right-0 z-50 mb-5 flex min-h-[50px] justify-between border-b border-white/30 bg-white py-2 px-4 font-light text-white transition-all;
 	}
-	.nav-item a {
-		@apply block py-2 px-4 text-[13px] font-light text-neutral-800 transition-all hover:bg-primary-light hover:text-white lg:px-2 lg:text-white/70 lg:hover:bg-transparent;
+	.navClassName.active {
+		@apply lg:bg-white/100 shadow-md;
 	}
-	.nav-item.active a {
-		@apply bg-primary-dark text-white lg:bg-transparent lg:text-white/70;
+
+	.navClassName .logo {
+		@apply lg:text-lg lg:text-white/70 lg:hover:text-white mr-4 inline-block whitespace-nowrap py-3.5 px-2 text-base font-bold leading-[15px] text-primary transition-all duration-300;
+	}
+	.navClassName.active .logo {
+		@apply lg:text-primary;
+	}
+
+	.navClassName .nav-item a {
+		@apply lg:px-2 lg:text-white/70 lg:hover:bg-transparent block py-2 px-4 text-[13px] font-light text-neutral-800 transition-all hover:bg-primary-light hover:text-white;
+	}
+	.navClassName.active .nav-item a {
+		@apply lg:text-primary hover:text-primary/60;
+	}
+
+	.navClassName .nav-item.active a {
+		@apply lg:bg-transparent lg:text-primary-light bg-primary-dark text-white;
 	}
 
 	.wrap-icon {
 		@apply text-white;
+	}
+
+	.tabItemBtn {
+		@apply relative px-6 py-1 text-white/60 transition-all before:absolute before:left-0 before:top-[100%] before:block before:h-[2px] before:w-full before:bg-primary-dark before:transition-all after:absolute after:left-0 after:bottom-0 after:block after:h-0 after:w-[2px] after:bg-primary-dark after:transition-all hover:text-primary-light hover:before:top-0 hover:after:h-full;
+	}
+	.tabItemBtn.active {
+		@apply text-white/100 before:top-0 before:bg-primary-dark after:top-0 after:bottom-0 after:h-full after:bg-primary-dark hover:text-primary-light hover:after:h-full;
 	}
 }

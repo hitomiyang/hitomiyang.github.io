@@ -9,6 +9,7 @@ import clsx from "clsx";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import useWindowScroll from "../hooks/useWindowScroll";
 
 const NavSubItem = [
 	{ Link: "about", Channel: "About" },
@@ -16,10 +17,10 @@ const NavSubItem = [
 	{ Link: "skills", Channel: "Skills" },
 	// { Link: "contact", Channel: "Contact" },
 ];
-// const RouteItem = [
-// 	{ Link: "project", Channel: "Project" },
-// 	{ Link: "weather", Channel: "Weather" },
-// ];
+const RouteItem = [
+	{ Link: "project", Channel: "Project" },
+	{ Link: "weather", Channel: "Weather" },
+];
 
 function Nav() {
 	const [show, setHidden] = useState(false);
@@ -34,20 +35,17 @@ function Nav() {
 	);
 
 	//SubNav
-	const location = useLocation();
-	const { hash } = location;
+	const { hash, pathname } = useLocation();
 
 	const [url, setUrl] = useState();
+	const scrolled = useWindowScroll({ start: 200, end: 100 });
 
 	useEffect(() => {
-		setUrl(location.pathname);
-	}, [location]);
+		setUrl(pathname);
+	}, [pathname]);
 
 	return (
-		<nav
-			id="mainNav"
-			className="fixed top-0 left-0 right-0 z-50 mb-5 flex min-h-[50px] justify-between border-b border-white/30 bg-white py-2 px-4 font-light text-white lg:flex-row lg:flex-nowrap lg:bg-transparent"
-		>
+		<nav id="mainNav" className={scrolled ? "navClassName active" : "navClassName"}>
 			<div className="mx-auto flex w-full flex-wrap items-center justify-between lg:px-3.5">
 				<HashLink to="/#" className="logo">
 					Hitomi YANG
@@ -64,12 +62,12 @@ function Nav() {
 									<HashLink to={`/#${item.Link}`}>{item.Channel}</HashLink>
 								</li>
 							))}
-						{/*RouteItem &&
+						{RouteItem &&
 							RouteItem.map((routeitem, i) => (
 								<li key={i} className={clsx("nav-item", url === `/${routeitem.Link}` ? " active" : "")}>
 									<Link to={`/${routeitem.Link}`}>{routeitem.Channel}</Link>
 								</li>
-							))*/}
+							))}
 					</ul>
 				</SlideDown>
 			</div>

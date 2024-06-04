@@ -12,7 +12,7 @@ const NavSubItem = [
 ];
 const RouteItem = [
 	{ Link: "project", Channel: "Project" },
-	{ Link: "weather", Channel: "Weather" },
+	// { Link: "weather", Channel: "Weather" },
 ];
 
 function NavSub() {

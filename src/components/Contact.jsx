@@ -12,21 +12,18 @@ function Contact() {
 	}, []);
 
 	return (
-		<section id="contact" className="bg-white">
+		<section id="contact" className="bg-white py-24 text-neutral-500">
 			<div className="mx-auto w-full px-3.5 sm:max-w-xl md:max-w-[720px] lg:max-w-[960px] xl:max-w-6xl">
-				<div className="col-12 text-center">
-					<h2 className="section-heading">
+				<div className="text-center">
+					<h2 className="mt-8 mb-7 text-[2.8em] font-extralight text-neutral-800">
 						Contact <FontAwesomeIcon icon={regular("comment-dots")} />
-						<i className="far fa-comment-dots"></i>
 					</h2>
 					<p>歡迎聯繫我!</p>
 
-					<div className="col-md-3 col-12 text-center">
-						<a href="mailto:hitomi.fox@gmail.com">
-							<FontAwesomeIcon icon={solid("envelope")} />
-							<p>hitomi.fox@gmail.com</p>
-						</a>
-					</div>
+					<a href="mailto:hitomi.fox@gmail.com">
+						<FontAwesomeIcon icon={solid("envelope")} />
+						<p>hitomi.fox@gmail.com</p>
+					</a>
 				</div>
 			</div>
 		</section>
